@@ -7,7 +7,7 @@ import { SiteMessage } from '/@/views/modules/notice/site/SiteMessage.api'
  */
 export function countByReceiveNotRead() {
   return defHttp.get<Result<number>>({
-    url: '/site/message/countByReceiveNotRead',
+    url: '/site/message/count-by-receive-not-read',
   })
 }
 
@@ -16,7 +16,7 @@ export function countByReceiveNotRead() {
  */
 export function pageByReceive(params) {
   return defHttp.get<Result<PageResult<SiteMessage>>>({
-    url: '/site/message/pageByReceive',
+    url: '/site/message/page-by-receive',
     params: params,
   })
 }
@@ -26,7 +26,7 @@ export function pageByReceive(params) {
  */
 export function findById(id) {
   return defHttp.get<Result<SiteMessage>>({
-    url: '/site/message/findById',
+    url: '/site/message/find-by-id',
     params: { id },
   })
 }

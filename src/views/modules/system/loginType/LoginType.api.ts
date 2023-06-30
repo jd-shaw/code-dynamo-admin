@@ -17,7 +17,7 @@ export const page = (params) => {
  */
 export const get = (id) => {
   return defHttp.get<Result<LoginType>>({
-    url: '/loginType/findById',
+    url: '/loginType/find-by-id',
     params: { id },
   })
 }
@@ -57,7 +57,7 @@ export const del = (id) => {
  */
 export const findAll = () => {
   return defHttp.get<Result<Array<LoginType>>>({
-    url: '/loginType/findAll',
+    url: '/loginType/find-all',
   })
 }
 
@@ -66,13 +66,13 @@ export const findAll = () => {
  */
 export const existsByCode = (code: string) => {
   return defHttp.get<Result<boolean>>({
-    url: '/loginType/existsByCode',
+    url: '/loginType/exists-by-code',
     params: { code },
   })
 }
 export const existsByCodeNotId = (code: string, id) => {
   return defHttp.get<Result<boolean>>({
-    url: '/loginType/existsByCodeNotId',
+    url: '/loginType/exists-by-code-not-id',
     params: { code, id },
   })
 }

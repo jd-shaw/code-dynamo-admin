@@ -6,7 +6,7 @@ import { Result } from '/#/axios'
  */
 export function findByParamKey(key) {
   return defHttp.get<Result<string>>({
-    url: `/system/param/findByParamKey`,
+    url: `/system/param/find-by-paramkey`,
     method: 'GET',
     params: { key },
   })

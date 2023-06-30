@@ -7,7 +7,7 @@ import { BaseEntity } from '/#/web'
  */
 export const page = (params) => {
   return defHttp.get<Result<PageResult<DictItem>>>({
-    url: '/dict/item/pageByDictionaryId',
+    url: '/dict/item/page-by-dictionary-id',
     params,
   })
 }
@@ -17,7 +17,7 @@ export const page = (params) => {
  */
 export const get = (id) => {
   return defHttp.get<Result<DictItem>>({
-    url: '/dict/item/findById',
+    url: '/dict/item/find-by-id',
     params: { id },
   })
 }
@@ -57,7 +57,7 @@ export const del = (id) => {
  */
 export const findAll = () => {
   return defHttp.get<Result<Array<DictItem>>>({
-    url: '/dict/item/findAll',
+    url: '/dict/item/find-all',
   })
 }
 /**
@@ -65,7 +65,7 @@ export const findAll = () => {
  */
 export const findAllByEnable = () => {
   return defHttp.get<Result<Array<DictItem>>>({
-    url: '/dict/item/findAllByEnable',
+    url: '/dict/item/find-all-by-enable',
   })
 }
 
@@ -74,13 +74,13 @@ export const findAllByEnable = () => {
  */
 export function existsByCode(code) {
   return defHttp.get<Result<boolean>>({
-    url: '/dict/item/existsByCode',
+    url: '/dict/item/exists-by-code',
     params: { code },
   })
 }
 export function existsByCodeNotId(code, id) {
   return defHttp.get<Result<boolean>>({
-    url: '/dict/item/existsByCodeNotId',
+    url: '/dict/item/exists-by-code-not-id',
     params: { code, id },
   })
 }
