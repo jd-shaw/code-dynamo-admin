@@ -6,7 +6,7 @@ import { Result } from '/#/axios'
  */
 export function findLoginTypeByCode(code) {
   return defHttp.get<Result<LoginType>>({
-    url: '/loginType/findByCode',
+    url: '/loginType/find-by-code',
     params: { code },
   })
 }

@@ -6,7 +6,7 @@ import { Result } from '/#/axios'
  */
 export const imgCaptcha = () => {
   return defHttp.post<Result<Captcha>>({
-    url: '/captcha/imgCaptcha',
+    url: '/captcha/img-captcha',
   })
 }
 

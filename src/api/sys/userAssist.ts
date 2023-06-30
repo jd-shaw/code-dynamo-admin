@@ -6,13 +6,13 @@ import { Result } from '/#/axios'
  */
 export function existsUsername(username) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsUsername`,
+    url: `/user/exists-username`,
     params: { username },
   })
 }
 export function existsUsernameNotId(username, id) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsUsernameNotId`,
+    url: `/user/exists-username-not-id`,
     params: { username, id },
   })
 }
@@ -22,13 +22,13 @@ export function existsUsernameNotId(username, id) {
  */
 export function existsPhone(phone) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsPhone`,
+    url: `/user/exists-phone`,
     params: { phone },
   })
 }
 export function existsPhoneNotId(phone, id) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsPhoneNotId`,
+    url: `/user/exists-phone-not-id`,
     params: { phone, id },
   })
 }
@@ -38,13 +38,13 @@ export function existsPhoneNotId(phone, id) {
  */
 export function existsEmail(email) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsEmail`,
+    url: `/user/exists-email`,
     params: { email },
   })
 }
 export function existsEmailNotId(email, id) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/existsEmailNotId`,
+    url: `/user/exists-email-not-id`,
     params: { email, id },
   })
 }
@@ -54,7 +54,7 @@ export function existsEmailNotId(email, id) {
  */
 export function sendCurrentPhoneChangeCaptcha() {
   return defHttp.post<Result<boolean>>({
-    url: `/user/sendCurrentPhoneChangeCaptcha`,
+    url: `/user/send-current-phone-change-captcha`,
   })
 }
 
@@ -63,7 +63,7 @@ export function sendCurrentPhoneChangeCaptcha() {
  */
 export function validateCurrentPhoneChangeCaptcha(captcha) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/validateCurrentPhoneChangeCaptcha`,
+    url: `/user/validate-current-phone-change-captcha`,
     params: { captcha },
   })
 }
@@ -73,7 +73,7 @@ export function validateCurrentPhoneChangeCaptcha(captcha) {
  */
 export function sendPhoneChangeCaptcha(phone) {
   return defHttp.post<Result<boolean>>({
-    url: `/user/sendPhoneChangeCaptcha`,
+    url: `/user/send-phone-change-captcha`,
     params: { phone },
   })
 }
@@ -83,7 +83,7 @@ export function sendPhoneChangeCaptcha(phone) {
  */
 export function validatePhoneChangeCaptcha(phone, captcha) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/validatePhoneChangeCaptcha`,
+    url: `/user/validate-phone-change-captcha`,
     params: { phone, captcha },
   })
 }
@@ -93,7 +93,7 @@ export function validatePhoneChangeCaptcha(phone, captcha) {
  */
 export function sendCurrentEmailChangeCaptcha() {
   return defHttp.post({
-    url: `/user/sendCurrentEmailChangeCaptcha`,
+    url: `/user/send-current-email-change-captcha`,
   })
 }
 
@@ -102,7 +102,7 @@ export function sendCurrentEmailChangeCaptcha() {
  */
 export function validateCurrentEmailChangeCaptcha(captcha) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/validateCurrentChangeEmailCaptcha`,
+    url: `/user/validate-current-change-email-captcha`,
     params: { captcha },
   })
 }
@@ -112,7 +112,7 @@ export function validateCurrentEmailChangeCaptcha(captcha) {
  */
 export function sendEmailChangeCaptcha(email) {
   return defHttp.post({
-    url: `/user/sendEmailChangeCaptcha`,
+    url: `/user/send-email-change-captcha`,
     params: { email },
   })
 }
@@ -122,7 +122,7 @@ export function sendEmailChangeCaptcha(email) {
  */
 export function validateEmailChangeCaptcha(email, captcha) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/validateEmailChangeCaptcha`,
+    url: `/user/validate-email-change-captcha`,
     params: { email, captcha },
   })
 }
@@ -132,7 +132,7 @@ export function validateEmailChangeCaptcha(email, captcha) {
  */
 export function sendPhoneForgetCaptcha(phone) {
   return defHttp.post<Result>({
-    url: `/user/sendPhoneForgetCaptcha`,
+    url: `/user/send-phone-for-get-captcha`,
     method: 'post',
     params: { phone },
   })
@@ -143,7 +143,7 @@ export function sendPhoneForgetCaptcha(phone) {
  */
 export function validatePhoneForgetCaptcha(phone, captcha) {
   return defHttp.get<Result<boolean>>({
-    url: `/user/validatePhoneForgetCaptcha`,
+    url: `/user/validate-phone-for-get-captcha`,
     params: { phone, captcha },
   })
 }
@@ -153,7 +153,7 @@ export function validatePhoneForgetCaptcha(phone, captcha) {
  */
 export function findUsernameByPhoneCaptcha(phone, captcha) {
   return defHttp.get<Result<string>>({
-    url: `/user/findUsernameByPhoneCaptcha`,
+    url: `/user/find-username-by-phone-captcha`,
     params: { phone, captcha },
   })
 }
@@ -163,7 +163,7 @@ export function findUsernameByPhoneCaptcha(phone, captcha) {
  */
 export function sendLoginSmsCode(phone) {
   return defHttp.post<Result>({
-    url: `/auth/sendSmsCaptcha`,
+    url: `/auth/send-sms-captcha`,
     params: { phone },
   })
 }
