@@ -10,7 +10,7 @@ import { Dept } from "/@/views/modules/system/dept/Dept.api";
  */
 export function findDeptIdsByUser(id) {
   return defHttp.get<Result<string[]>>({
-    url: `/user/dept/findIdsByUser`,
+    url: `/user/dept/find-ids-by-user`,
     params: { id },
   })
 }
@@ -20,7 +20,7 @@ export function findDeptIdsByUser(id) {
  */
 export function getDeptList(id) {
   return defHttp.get<Result<Dept[]>>({
-    url: `/user/dept/findAllByUser`,
+    url: `/user/dept/find-all-by-user`,
     params: { id },
   })
 }
@@ -30,7 +30,7 @@ export function getDeptList(id) {
  */
 export function addUserDept(data) {
   return defHttp.post({
-    url: `/user/dept/saveAssign`,
+    url: `/user/dept/save-assign`,
     data: data,
   })
 }
@@ -40,7 +40,7 @@ export function addUserDept(data) {
  */
 export function addUserDeptBatch(data) {
   return defHttp.post({
-    url: `/user/dept/saveAssignBatch`,
+    url: `/user/dept/save-assign-batch`,
     data: data,
   })
 }
@@ -50,7 +50,7 @@ export function addUserDeptBatch(data) {
  */
 export function getRoleIds(id) {
   return defHttp.get<Result<string[]>>({
-    url: `/user/role/findRoleIdsByUser`,
+    url: `/user/role/find-role-ids-by-user`,
     params: { id },
   })
 }
@@ -60,7 +60,7 @@ export function getRoleIds(id) {
  */
 export function getRoles(id) {
   return defHttp.get<Result<Role[]>>({
-    url: `/user/role/findRolesByUser`,
+    url: `/user/role/find-roles-by-user`,
     params: { id },
   })
 }
@@ -70,7 +70,7 @@ export function getRoles(id) {
  */
 export function addUserRole(data) {
   return defHttp.post({
-    url: `/user/role/saveAssign`,
+    url: `/user/role/save-assign`,
     data: data,
   })
 }
@@ -80,7 +80,7 @@ export function addUserRole(data) {
  */
 export function addUserRoleBatch(data) {
   return defHttp.post({
-    url: `/user/role/saveAssignBatch`,
+    url: `/user/role/save-assign-batch`,
     data: data,
   })
 }
@@ -90,7 +90,7 @@ export function addUserRoleBatch(data) {
  */
 export function getDataScopeIdByUser(id) {
   return defHttp.get<Result<string>>({
-    url: `/user/data/scope/findDataScopeIdByUser`,
+    url: `/user/data/scope/find-data-scope-id-by-user`,
     params: { id },
   })
 }
@@ -100,7 +100,7 @@ export function getDataScopeIdByUser(id) {
  */
 export function getDataScopeByUser(id) {
   return defHttp.get<Result<DataScope>>({
-    url: `/user/data/scope/findDataScopeByUser`,
+    url: `/user/data/scope/find-data-scope-by-user`,
     params: { id },
   })
 }
@@ -110,7 +110,7 @@ export function getDataScopeByUser(id) {
  */
 export function addUserDataScope(data) {
   return defHttp.post({
-    url: `/user/data/scope/saveAssign`,
+    url: `/user/data/scope/save-assign`,
     data: data,
   })
 }
@@ -120,7 +120,7 @@ export function addUserDataScope(data) {
  */
 export function addUserDataScopeBatch(data) {
   return defHttp.post({
-    url: `/user/data/scope/saveAssignBatch`,
+    url: `/user/data/scope/save-assign-batch`,
     data: data,
   })
 }

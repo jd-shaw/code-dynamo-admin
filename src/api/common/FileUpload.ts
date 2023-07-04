@@ -9,7 +9,7 @@ const { VITE_GLOB_API_URL } = getAppEnvConfig()
  */
 export const getFilePreviewUrl = (id) => {
   return defHttp.get<Result<string>>({
-    url: `/file/getFilePreviewUrl`,
+    url: `/file/get-file-preview-url`,
     params: { id },
   })
 }
@@ -19,7 +19,7 @@ export const getFilePreviewUrl = (id) => {
  */
 export const getFilePreviewUrlPrefix = () => {
   return defHttp.get<Result<string>>({
-    url: `/file/getFilePreviewUrlPrefix`,
+    url: `/file/get-file-preview-url-prefix`,
   })
 }
 
@@ -28,7 +28,7 @@ export const getFilePreviewUrlPrefix = () => {
  */
 export const getFileDownloadUrl = (id) => {
   return defHttp.get<Result<string>>({
-    url: `/file/getFileDownloadUrl`,
+    url: `/file/get-file-download-url`,
     params: { id },
   })
 }

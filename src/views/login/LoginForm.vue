@@ -96,7 +96,7 @@
   const form = reactive({
     client: '',
     account: 'admin',
-    password: '123456',
+    password: 'admin123',
     loginType: 'password',
     captchaKey: '',
     captcha: '',
