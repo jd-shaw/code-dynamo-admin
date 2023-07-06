@@ -17,7 +17,7 @@ export const page = (params) => {
  */
 export const get = (id) => {
   return defHttp.get<Result<QuartzJob>>({
-    url: '/quartz/findById',
+    url: '/quartz/find-by-id',
     params: { id },
   })
 }
@@ -49,15 +49,6 @@ export const del = (id) => {
   return defHttp.delete({
     url: '/quartz/delete',
     params: { id },
-  })
-}
-
-/**
- * 查询全部
- */
-export const findAll = () => {
-  return defHttp.get<Result<Array<QuartzJob>>>({
-    url: '/quartz/findAll',
   })
 }
 
@@ -97,7 +88,7 @@ export function execute(id) {
  */
 export const syncJobStatus = () => {
   return defHttp.post({
-    url: '/quartz/syncJobStatus',
+    url: '/quartz/sync-job-status',
   })
 }
 
@@ -106,7 +97,7 @@ export const syncJobStatus = () => {
  */
 export function judgeJobClass(jobClassName) {
   return defHttp.get<Result<string>>({
-    url: '/quartz/judgeJobClass',
+    url: '/quartz/judge-job-class',
     params: { jobClassName },
   })
 }
