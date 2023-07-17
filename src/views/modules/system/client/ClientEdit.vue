@@ -22,7 +22,7 @@
         <a-form-item label="启用状态" v-bind="validateInfos.enable" name="enable">
           <a-switch checked-children="开" un-checked-children="关" v-model:checked="form.enable" :disabled="showable || form.system" />
         </a-form-item>
-        <a-form-item label="系统内置" name="system">
+        <a-form-item label="系统内置" name="isSystem">
           <a-tag v-if="form.system" color="green">是</a-tag>
           <a-tag v-else color="red">否</a-tag>
         </a-form-item>
