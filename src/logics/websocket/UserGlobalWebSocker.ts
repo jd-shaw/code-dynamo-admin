@@ -22,8 +22,8 @@ export async function initWebSocket() {
   const serverUrl = `${wsUrl}/ws/user?AccessToken=${token}`
 
   const { close } = useWebSocket(serverUrl, {
-    autoReconnect: true,
-    heartbeat: true,
+    autoReconnect: false,
+    heartbeat: false,
     onMessage: onMessage,
     onConnected: () => {
       console.log('用户全局WebSocket连接成功')
