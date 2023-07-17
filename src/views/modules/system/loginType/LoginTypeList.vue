@@ -15,9 +15,9 @@
         <vxe-column type="seq" width="60" />
         <vxe-column field="code" title="编码" />
         <vxe-column field="name" title="名称" />
-        <vxe-column field="system" title="系统内置">
+        <vxe-column field="isSystem" title="系统内置">
           <template #default="{ row }">
-            <a-tag v-if="row.system" color="green">是</a-tag>
+            <a-tag v-if="row.isSystem" color="green">是</a-tag>
             <a-tag v-else color="red">否</a-tag>
           </template>
         </vxe-column>
