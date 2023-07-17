@@ -25,8 +25,8 @@
             <a-radio-button :value="OPEN_ID"> 第三方登录 </a-radio-button>
           </a-radio-group>
         </a-form-item>
-        <a-form-item label="系统内置" name="system">
-          <a-tag v-if="form.system" color="green">是</a-tag>
+        <a-form-item label="系统内置" name="isSystem">
+          <a-tag v-if="form.isSystem" color="green">是</a-tag>
           <a-tag v-else color="red">否</a-tag>
         </a-form-item>
         <a-form-item label="启用状态" name="enable">
