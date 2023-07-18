@@ -16,7 +16,7 @@
         <vxe-column field="code" title="编码" />
         <vxe-column field="name" title="名称" />
         <vxe-column field="remark" title="说明" />
-        <vxe-column field="createTime" title="创建时间" />
+        <vxe-column field="createDate" title="创建时间" />
         <vxe-column fixed="right" width="210" :showOverflow="false" title="操作">
           <template #default="{ row }">
             <span>
